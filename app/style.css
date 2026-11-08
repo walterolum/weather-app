@@ -1,0 +1,146 @@
+/* Premium Glassmorphism Weather App Styles */
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.app-container {
+  width: 90vw;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.header .tagline {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.search-section {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+#city-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+#city-input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+#city-input:focus {
+  background: rgba(255,255,255,0.35);
+}
+
+#search-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: #ff7e5f;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,126,95,0.4);
+}
+
+.weather-result {
+  margin-top: 1.5rem;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.location h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.location p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+#temperature {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.details p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.footer a {
+  color: #ffcfdf;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .app-container { padding: 1.5rem 1rem; }
+  .header h1 { font-size: 1.8rem; }
+  #temperature { font-size: 2.5rem; }
+}
